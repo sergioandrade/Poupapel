@@ -1,0 +1,27 @@
+
+.button {
+  padding: 14px 20px;
+  text-align: center;
+  color: #fff;
+  font-family: inherit;
+  font-size: 20px;
+  border: 0;
+  width: 100%;
+  wiil-change: transform;
+  user-select: none;
+  apperance: none;
+  float: left;
+  width: 100%;
+  margin: 0;
+  box-shadow: 0 0 3px 3px rgba(#000, 0.03);
+}
+
+@mixin centered($width, $height) {
+  position: absolute;
+  left: 50%;
+  margin-left: -($width/2);
+  width: $width;
+  top: 50%;
+  margin-top: -($height/2);
+  height: $height;
+}

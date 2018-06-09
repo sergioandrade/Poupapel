@@ -1,0 +1,15 @@
+@import '_settings';
+@import '_reset';
+
+body{
+  font-smoothing: antialiased;
+  font-smoothing: grayscale;
+  font-family: $primary-font;
+  font-size: $font-size;
+  line-height: 1.4;
+  color: $default-color;
+  padding-top: $header-size;
+  float: left;
+  width: 100%;
+  background: $gray1;
+}
