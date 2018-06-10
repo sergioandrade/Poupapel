@@ -9,6 +9,10 @@ class Compare extends Component {
     return (
       <div className="compare">
         <CardList></CardList>
+        <CardList></CardList>
+        <CardList></CardList>
+        <CardList></CardList>
+        <CardList></CardList>
       </div>
     );
   }
