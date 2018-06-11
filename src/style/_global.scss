@@ -25,11 +25,15 @@ strong {
 .logo {
   display: flex;
   justify-content: center;
-  padding: $gutter;
+  background: #fff;
+  margin-left: - $gutter;
+  margin-right: - $gutter;
+  margin-bottom: 20px;
+  box-shadow: 2px 0 6px 0 rgba(0,0,0,0.1);
 
   img {
     width: 60%;
-    max-width: 203px;
+    max-width: 180px;
     height: 68px;
   }
 }
@@ -76,7 +80,7 @@ strong {
 }
 
 .button {
-  width: 80%;
+  width: 100%;
   height: 48px;
   padding: 10px 40px;
   border-radius: 40px;

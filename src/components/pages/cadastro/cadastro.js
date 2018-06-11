@@ -53,7 +53,7 @@ class Cadastro extends Component {
           <label className="form-group">
             <span>Qual o valor do pacote?</span>
             <div className="form-control-money">
-              <CurrencyInput name="preco" type="number" autoComplete="off" className="form-control" placeholder="Ex.: 2,99"  pattern="\d*" value={this.state.preco} onChange={this.handleInputChange}/>
+              <CurrencyInput name="preco" type="number" autoComplete="off" className="form-control" placeholder="Ex.: 2,99"  pattern="\d*" value={this.state.preco}/>
               <small>R$</small>
             </div>
           </label>

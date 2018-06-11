@@ -12,9 +12,9 @@ class App extends Component {
 					<img src={logo} alt="poupapel logo" />
 				</figure>
 				<Switch>
-					<Route exact path='/' component={Compare} />
+					<Route exact path='/' component={Cadastro} />
 					<Route path='/compare' component={Compare} />
-					<Route path='/cadastro' component={Cadastro} />
+					<Route path='/adicionar' component={Cadastro} />
 				</Switch>
 			</div>
 		)
