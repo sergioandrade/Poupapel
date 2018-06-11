@@ -20,11 +20,7 @@ class Cadastro extends Component {
     this.handleInputChange = this.handleInputChange.bind(this)
     this.calculatePrice = this.calculatePrice.bind(this)
     this.handleChangePrice = this.handleChangePrice.bind(this)
-
-  }
-
-  getInitialState(){
-    return ({preco: "0,00"});
+    this.list = []
   }
 
   handleChangePrice(event, maskedvalue, floatvalue){
@@ -42,8 +38,12 @@ class Cadastro extends Component {
   }
 
   calculatePrice () {
-    let price = (this.state.preco / (this.state.rolos * this.state.metros) * 100).toFixed(2).replace('.', ',')
-    this.setState({resultado: price});
+    this.setState({resultado: (this.state.preco / (this.state.rolos * this.state.metros) * 100).toFixed(2).replace('.', ',')}, this.callBackCalculatePrice)
+  }
+
+  callBackCalculatePrice () {
+    this.list.push(this.state)
+    console.log(this.list)
   }
 
   render() {
@@ -70,7 +70,7 @@ class Cadastro extends Component {
           <label className="form-group">
             <span>Qual o valor do pacote?</span>
             <div className="form-control-money">
-              <CurrencyInput name="preco" type="number" maxlength="6" autoComplete="off" className="form-control" placeholder="Ex.: 2,99"  pattern="\d*" value={this.state.preco} onChange={this.handleChangePrice}/>
+              <CurrencyInput name="preco" type="number" maxLength="6" autoComplete="off" className="form-control" placeholder="Ex.: 2,99"  pattern="\d*" value={this.state.preco} onChange={this.handleChangePrice}/>
               <small>R$</small>
             </div>
           </label>
