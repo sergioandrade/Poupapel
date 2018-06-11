@@ -4,21 +4,32 @@ import './range-slider.scss'
 class RangeSlider extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      value: this.props.min
-    }
 
-    this.handleChange = this.handleChange.bind(this)
+    this.state = {
+      value: this.props.value
+    }
+    this.handleInputChange = this.handleInputChange.bind(this)
   }
-  handleChange(event) {
-    this.setState({value: event.target.value})
+  handleInputChange(event) {
+    this.setState({
+      value: event.target.value
+    })
   }
+
   render() {
+    const name = this.props.name
+    const value = this.props.value
+    const onChange = this.props.onChange
+    const steps = this.props.steps
+    const min = this.props.min
+    const max = this.props.max
+
     return (
       <div>
         <div className="range-slider">
           <div className="range-slider__delimiter">
-            <input type="range" value={this.state.value} onChange={this.handleChange} step={this.props.steps} min={this.props.min} max={this.props.max}/>
+            <input type="range" name={name} value={value} onChange={onChange} step={steps} min={min} max={max} />
+
             <div className="range-slider-numbers">
               <span>2</span>
               <span>10</span>
@@ -32,8 +43,8 @@ class RangeSlider extends Component {
               <span>90</span>
               <span>100</span>
             </div>
-            <div className="tooltip" style={{left: this.state.value + '%'}}>
-              <input type="number" value={this.state.value} onChange={this.handleChange}/>
+            <div className="tooltip" style={{left: value + '%'}}>
+              <input type="number" name={name} value={value} onChange={onChange} />
             </div>
           </div>
         </div>

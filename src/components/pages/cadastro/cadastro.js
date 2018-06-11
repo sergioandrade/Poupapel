@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import RangeSlider from '../../app/range-slider/range-slider'
+import CurrencyInput from 'react-currency-masked-input'
+
 
 import './cadastro.scss'
 
@@ -24,6 +26,7 @@ class Cadastro extends Component {
     this.setState({
       [name]: value
     })
+
   }
 
   render() {
@@ -49,8 +52,12 @@ class Cadastro extends Component {
 
           <label className="form-group">
             <span>Qual o valor do pacote?</span>
-            <input type="text" className="form-control" placeholder="R$ 00,00" name="preco" value={this.state.preco} onChange={this.handleInputChange}/>
+            <div className="form-control-money">
+              <CurrencyInput name="preco" type="number" autoComplete="off" className="form-control" placeholder="Ex.: 2,99"  pattern="\d*" value={this.state.preco} onChange={this.handleInputChange}/>
+              <small>R$</small>
+            </div>
           </label>
+
         </form>
 
         <div className="register-button-wrapper">
