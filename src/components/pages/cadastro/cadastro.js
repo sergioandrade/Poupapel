@@ -8,14 +8,27 @@ import './cadastro.scss'
 class Cadastro extends Component {
   constructor(props) {
     super(props)
+
     this.state = {
       marca: '',
       rolos: 2,
       metros: 10,
-      preco: ''
+      preco: '',
+      resultado: 0
     }
 
     this.handleInputChange = this.handleInputChange.bind(this)
+    this.calculatePrice = this.calculatePrice.bind(this)
+    this.handleChangePrice = this.handleChangePrice.bind(this)
+
+  }
+
+  getInitialState(){
+    return ({preco: "0,00"});
+  }
+
+  handleChangePrice(event, maskedvalue, floatvalue){
+    this.setState({preco: maskedvalue});
   }
 
   handleInputChange(event) {
@@ -26,7 +39,11 @@ class Cadastro extends Component {
     this.setState({
       [name]: value
     })
+  }
 
+  calculatePrice () {
+    let price = (this.state.preco / (this.state.rolos * this.state.metros) * 100).toFixed(2).replace('.', ',')
+    this.setState({resultado: price});
   }
 
   render() {
@@ -53,15 +70,14 @@ class Cadastro extends Component {
           <label className="form-group">
             <span>Qual o valor do pacote?</span>
             <div className="form-control-money">
-              <CurrencyInput name="preco" type="number" autoComplete="off" className="form-control" placeholder="Ex.: 2,99"  pattern="\d*" value={this.state.preco}/>
+              <CurrencyInput name="preco" type="number" maxlength="6" autoComplete="off" className="form-control" placeholder="Ex.: 2,99"  pattern="\d*" value={this.state.preco} onChange={this.handleChangePrice}/>
               <small>R$</small>
             </div>
           </label>
-
         </form>
 
         <div className="register-button-wrapper">
-          <button className="button">SALVAR</button>
+          <button className="button" onClick={this.calculatePrice}>SALVAR</button>
         </div>
       </div>
     )
