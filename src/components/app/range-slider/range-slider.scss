@@ -52,12 +52,6 @@
     font-family: $secondary-font;
     border-radius: inherit;
     color: $default-color;
-
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-      appearance: none;
-      margin: 0;
-    }
   }
 
   &:after {

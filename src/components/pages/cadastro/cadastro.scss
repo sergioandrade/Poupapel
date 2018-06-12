@@ -4,15 +4,7 @@
 	padding: 0 $gutter;
 }
 .register-button-wrapper {
-  position: fixed;
-  bottom: 20px;
-  width: 100%;
-  left: 0;
-  padding: $gutter;
-  text-align: center;
-  @media screen and(max-height: 400px) {
-    position: static;
-  }
+
 }
 
 .form-control-money {

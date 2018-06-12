@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import RangeSlider from '../../app/range-slider/range-slider'
 import CurrencyInput from 'react-currency-masked-input'
 
-
 import './cadastro.scss'
 
 class Cadastro extends Component {
@@ -20,6 +19,7 @@ class Cadastro extends Component {
     this.handleInputChange = this.handleInputChange.bind(this)
     this.calculatePrice = this.calculatePrice.bind(this)
     this.handleChangePrice = this.handleChangePrice.bind(this)
+
     this.list = []
   }
 
@@ -42,8 +42,14 @@ class Cadastro extends Component {
   }
 
   callBackCalculatePrice () {
+    let cachedList = localStorage.getItem('list')
+    if (cachedList) {
+      this.list = JSON.parse(cachedList)
+    }
+
     this.list.push(this.state)
-    console.log(this.list)
+    localStorage.setItem('list', JSON.stringify(this.list))
+    window.location.href= "/compare";
   }
 
   render() {

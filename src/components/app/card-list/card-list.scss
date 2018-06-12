@@ -1,9 +1,8 @@
 @import '../../../style/_settings';
 
-.card-list {
+.card-item {
 	background: #fff;
 	padding: 10px $gutter;
-	// padding-left: 40px;
 	border-radius: 4px;
 	box-shadow: 0px 2px 18px rgba(0,0,0,0.08);
 	position: relative;
@@ -11,97 +10,4 @@
   justify-content: space-between;
   overflow: hidden;
   margin: 10px 0;
-
-  .card-list-column {
-    max-width: 50%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    &:last-child {
-
-      &:before {
-        content: "";
-        height: 200px;
-        width: 400px;
-        background: rgba(#000, 0.02);
-        position: absolute;
-        left: -40px;
-        top: 50%;
-        margin-top: -100px;
-        border-radius: 100px;
-      }
-    }
-  }
-}
-
-.brand-name {
-  font-family: $secondary-font;
-  font-size: 18px;
-  display: inline-block;
-  margin: 2px 0;
-}
-
-.paper-info {
-  display: flex;
-  align-items: center;
-  margin: 2px 0;
-
-  &__icon {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 4px;
-
-    svg {
-
-      path {
-        fill: darken($primary-color, 20%);
-      }
-    }
-  }
-
-  &__text {
-    color: $gray5;
-  }
-}
-
-.big-price {
-  font-family: $secondary-font;
-  color: $primary-color;
-  font-size: 20px;
-  text-align: right;
-}
-.small-price {
-  font-family: $secondary-font;
-  color: $gray5;
-  font-size: 12px;
-  text-align: right;
-}
-
-.legend {
-
-  &__item {
-    font-size: 10px;
-    display: flex;
-    align-items: center;
-
-    &__bullet {
-      width: 10px;
-      height: 10px;
-      display: inline-block;
-      margin-left: 4px;
-
-      &--green{
-        background: $primary-color;
-      }
-
-      &--gray{
-        background: $gray5;
-      }
-    }
-  }
 }
