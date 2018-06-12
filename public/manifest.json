@@ -1,15 +1,112 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
-  ],
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+    "short_name": "Poupapel",
+    "name": "Poupapel Calculadora de Papel Higiênico",
+    "icons": [
+        {
+            "src": "/images/favicon.ico",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "/images/9bcd9a2c-ef37-92e8-3198-daba6f7c60be.webPlatform.png",
+            "sizes": "44x44",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/17a7df3f-95fe-c63c-367c-2504ed32e8ca.webPlatform.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/f1affb5e-dc1d-57b2-71db-61f9159b2ba7.webPlatform.png",
+            "sizes": "1240x600",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/4d7aabb0-2f4f-be04-fd9a-6c0b3d3338ea.webPlatform.png",
+            "sizes": "300x300",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/21110ab7-55a0-0152-b41e-960d3e5334ed.webPlatform.png",
+            "sizes": "150x150",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/1a0833d9-e42f-0b55-71bd-5bed6a576c9e.webPlatform.png",
+            "sizes": "88x88",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/4a1eae8c-76bc-7112-5dce-8f90ec0188c1.webPlatform.png",
+            "sizes": "24x24",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/bc2f1b83-87b8-fcdd-fc9b-eafc27621041.webPlatform.png",
+            "sizes": "50x50",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/47f26a1d-ee61-5dc5-437c-50e9e4f57095.webPlatform.png",
+            "sizes": "620x300",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/bfe7e506-799b-0810-7442-37193ccddaa9.webPlatform.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/60b2be6b-a0d7-740d-7f63-b764ce668488.webPlatform.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/045c9be4-6e68-076e-0d29-4326a10eba0a.webPlatform.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/b55920fa-23f9-49b9-4e0f-02e66e00defe.webPlatform.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/a133b439-942b-4e66-6ca4-e41805a05264.webPlatform.png",
+            "sizes": "36x36",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/be5377de-7915-7388-34af-e48dff98443d.webPlatform.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/8771b124-d160-35ae-afa1-08c5bcfc849d.webPlatform.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/fba3d654-8afc-d807-46c0-bebb3ed84246.webPlatform.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/c86d4431-bac1-5e21-39b9-0fd46eca37a1.webPlatform.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/ce5a1813-6986-c200-33ff-2273e3c730c7.webPlatform.png",
+            "sizes": "76x76",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "https://poupapel.surge.sh/index.html",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "lang": "pt",
+    "description": "Poupapel é um App que vai te ajudar na hora de comprar papel higiênico."
 }

@@ -88,7 +88,7 @@ strong {
   color: #fff;
   border: none;
   font-family: $secondary-font;
-  box-shadow: 0 11px 56px 0 rgba($primary-color, 0.3);
+  box-shadow: 12px 15px 20px rgba(0, 0, 0, 0.05);
   font-size: $font-size;
   margin-top: 20px;
   display: flex;
@@ -97,6 +97,10 @@ strong {
 
   &--secondary {
     background: $gray5;
+  }
+
+  &:hover {
+    text-decoration: none;
   }
 }
 
