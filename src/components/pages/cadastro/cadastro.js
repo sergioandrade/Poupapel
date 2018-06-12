@@ -81,10 +81,7 @@ class Cadastro extends Component {
             </div>
           </label>
         </form>
-
-        <div className="register-button-wrapper">
-          <button className="button" onClick={this.calculatePrice}>SALVAR</button>
-        </div>
+        <button className="button" onClick={this.calculatePrice}>SALVAR</button>
       </div>
     )
   }

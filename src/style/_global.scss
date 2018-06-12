@@ -89,6 +89,15 @@ strong {
   border: none;
   font-family: $secondary-font;
   box-shadow: 0 11px 56px 0 rgba($primary-color, 0.3);
+  font-size: $font-size;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--secondary {
+    background: $gray5;
+  }
 }
 
 input[type=number]::-webkit-inner-spin-button,
