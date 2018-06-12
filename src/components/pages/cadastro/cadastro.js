@@ -49,7 +49,8 @@ class Cadastro extends Component {
 
     this.list.push(this.state)
     localStorage.setItem('list', JSON.stringify(this.list))
-    window.location.href= "/compare";
+    // window.location.href= "/compare";
+    this.props.history.push('/compare');
   }
 
   render() {
@@ -82,6 +83,7 @@ class Cadastro extends Component {
           </label>
         </form>
         <button className="button" onClick={this.calculatePrice}>SALVAR</button>
+        {/*<Link to="/compare">COMPARAR</Link>*/}
       </div>
     )
   }

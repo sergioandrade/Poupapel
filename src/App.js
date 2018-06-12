@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-import { Route, Switch, Router } from "react-router-dom"
+import { BrowserRouter as Router, Route} from 'react-router-dom'
 import Compare from './components/pages/compare/compare'
 import Cadastro from './components/pages/cadastro/cadastro'
 import logo from './img/poupapel-logo.svg'
-import History from './helpers/history';
+import createBrowserHistory from 'history/createBrowserHistory'
+
+const customHistory = createBrowserHistory()
 
 class App extends Component {
 	render() {
@@ -12,11 +14,11 @@ class App extends Component {
 				<figure className="logo">
 					<img src={logo} alt="poupapel logo" />
 				</figure>
-        <Router history={History}>
-  				<Switch>
-  					<Route exact path='/' component={Cadastro} />
-  					<Route exact path='/compare' component={Compare} />
-  				</Switch>
+        <Router history={customHistory}>
+          <div>
+            <Route exact path="/" component={Cadastro} />
+            <Route path="/compare" component={Compare} />
+          </div>
         </Router>
 			</div>
 		)
