@@ -103,10 +103,10 @@
             "type": "image/png"
         }
     ],
-    "start_url": "https://poupapel.surge.sh/index.html",
+    "start_url": "index.html",
     "display": "standalone",
-    "theme_color": "#000000",
-    "background_color": "#000000",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
     "lang": "pt",
     "description": "Poupapel é um App que vai te ajudar na hora de comprar papel higiênico."
 }

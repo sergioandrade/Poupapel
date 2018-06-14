@@ -36,7 +36,8 @@ class Cadastro extends Component {
     })
   }
 
-  calculatePrice () {
+  calculatePrice (e) {
+    e.preventDefault()
     this.setState({resultado: (this.state.preco / (this.state.rolos * this.state.metros) * 100).toFixed(2).replace('.', ',')}, this.callBackCalculatePrice)
   }
 
@@ -65,7 +66,7 @@ class Cadastro extends Component {
 
     return (
       <div>
-        <form className="cadastro">
+        <form className="cadastro" onSubmit={this.calculatePrice}>
 
           <label className="form-group">
             <span>Qual a marca do produto?</span>
@@ -93,8 +94,9 @@ class Cadastro extends Component {
               <small>R$</small>
             </div>
           </label>
+
+          <button className="button" type="submit">SALVAR</button>
         </form>
-        <button className="button" onClick={this.calculatePrice}>SALVAR</button>
       </div>
     )
   }
