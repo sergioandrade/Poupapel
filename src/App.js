@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route} from 'react-router-dom'
+import { Router, Route, Link} from 'react-router-dom'
 import Compare from './components/pages/compare/compare'
 import Cadastro from './components/pages/cadastro/cadastro'
 import logo from './img/poupapel-logo.svg'
@@ -18,6 +18,9 @@ class App extends Component {
           <div>
             <Route exact path="/" component={Cadastro} />
             <Route path="/compare" component={Compare} />
+            <footer className="footer">
+             <Link to="/compare">Comparar</Link>
+            </footer>
           </div>
         </Router>
 			</div>

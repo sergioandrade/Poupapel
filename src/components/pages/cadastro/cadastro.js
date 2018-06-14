@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import RangeSlider from '../../app/range-slider/range-slider'
 import CurrencyInput from 'react-currency-masked-input'
 
 import './cadastro.scss'
@@ -49,8 +48,17 @@ class Cadastro extends Component {
 
     this.list.push(this.state)
     localStorage.setItem('list', JSON.stringify(this.list))
-    // window.location.href= "/compare";
     this.props.history.push('/compare');
+  }
+
+  renderOptions(acumulator) {
+    let options = [];
+
+    for (var i = 0; i < 100; i = i+acumulator) {
+      options.push(i)
+    }
+
+    return (options.map((option, index) => <option key={index} value={option}>{option}</option>))
   }
 
   render() {
@@ -66,12 +74,16 @@ class Cadastro extends Component {
 
           <label className="form-group">
             <span>Quantos rolos tem na embalagem?</span>
-            <RangeSlider steps="2" min="2" max="100" name="rolos" value={this.state.rolos} onChange={this.handleInputChange}/>
+            <select name="rolos" className="form-control" value={this.state.rolos} onChange={this.handleInputChange}>
+              {this.renderOptions(1)}
+            </select>
           </label>
 
           <label className="form-group">
             <span>De quantos metros são os rolos?</span>
-            <RangeSlider steps="10" min="10" max="100" name="metros" value={this.state.metros} onChange={this.handleInputChange}/>
+            <select name="metros" className="form-control" value={this.state.metros} onChange={this.handleInputChange}>
+              {this.renderOptions(10)}
+            </select>
           </label>
 
           <label className="form-group">
@@ -83,7 +95,6 @@ class Cadastro extends Component {
           </label>
         </form>
         <button className="button" onClick={this.calculatePrice}>SALVAR</button>
-        {/*<Link to="/compare">COMPARAR</Link>*/}
       </div>
     )
   }
