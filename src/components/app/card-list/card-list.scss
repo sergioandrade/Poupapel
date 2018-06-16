@@ -6,6 +6,21 @@
   box-shadow: 0px 2px 18px rgba(0,0,0,0.08);
   background: #fff;
 
+  &:before {
+    content: attr(data-index)'º';
+    font-size: 14px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50px;
+    padding: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $secondary-font;
+  }
+
   &:first-child {
     border: 1px solid $primary-color;
     .item-final-price {
@@ -16,12 +31,11 @@
 }
 
 .card-item {
-  padding: 0 30px 0 10px;
+  padding: 0 10px 0 50px;
   position: relative;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-
 }
 
 .card-item__column {

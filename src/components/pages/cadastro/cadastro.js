@@ -70,32 +70,32 @@ class Cadastro extends Component {
 
           <label className="form-group">
             <span>Qual a marca do produto?</span>
-            <input type="text" className="form-control" placeholder="Ex.: Personalitè" name="marca" value={this.state.marca} onChange={this.handleInputChange}/>
+            <input type="text" className="form-control" placeholder="Ex.: Personalitè" name="marca" value={this.state.marca} onChange={this.handleInputChange} tabindex="1"/>
           </label>
 
-          <label className="form-group">
+          <div className="form-group">
             <span>Quantos rolos tem na embalagem?</span>
-            <select name="rolos" className="form-control" value={this.state.rolos} onChange={this.handleInputChange}>
+            <select name="rolos" className="form-control" value={this.state.rolos} onChange={this.handleInputChange} tabindex="2">
               {this.renderOptions(1)}
             </select>
-          </label>
+          </div>
 
-          <label className="form-group">
+          <div className="form-group">
             <span>De quantos metros são os rolos?</span>
-            <select name="metros" className="form-control" value={this.state.metros} onChange={this.handleInputChange}>
+            <select name="metros" className="form-control" value={this.state.metros} onChange={this.handleInputChange} tabindex="3">
               {this.renderOptions(10)}
             </select>
-          </label>
+          </div>
 
           <label className="form-group">
             <span>Qual o valor do pacote?</span>
             <div className="form-control-money">
-              <CurrencyInput name="preco" type="number" maxLength="6" autoComplete="off" className="form-control" placeholder="Ex.: 2,99"  pattern="\d*" value={this.state.preco} onChange={this.handleChangePrice}/>
+              <CurrencyInput name="preco" type="number" maxLength="6" autoComplete="off" className="form-control" placeholder="Ex.: 2,99"  value={this.state.preco} onChange={this.handleChangePrice} tabindex="4"/>
               <small>R$</small>
             </div>
           </label>
 
-          <button className="button" type="submit">SALVAR</button>
+          <button className="button" type="submit" tabindex="5">SALVAR</button>
         </form>
       </div>
     )

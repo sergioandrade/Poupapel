@@ -18,7 +18,7 @@ class Compare extends Component {
         return 0;
       })
       if (list) {
-        return(list.map((item, index) => <CardList key={index} item={item} />))
+        return(list.map((item, index) => <CardList key={index} index={index} item={item} />))
       }
     } else {
       return(<strong>Ops! Não há itens na sua lista.</strong>)
