@@ -52,9 +52,18 @@ class Cadastro extends Component {
     this.props.history.push('/compare');
   }
 
-  renderOptions(acumulator) {
+  renderRolos(acumulator) {
     let options = [];
-    for (var i = 0; i < 100; i = i+acumulator) {
+    for (var i = 1; i <= 100; i = i+1) {
+      options.push(i)
+    }
+
+    return (options.map((option, index) => <option key={index} value={option}>{option}</option>))
+  }
+
+  renderMetros(acumulator) {
+    let options = [];
+    for (var i = 10; i < 210; i = i+10) {
       options.push(i)
     }
 
@@ -75,14 +84,14 @@ class Cadastro extends Component {
           <div className="form-group">
             <span>Quantos rolos tem na embalagem?</span>
             <select name="rolos" className="form-control" value={this.state.rolos} onChange={this.handleInputChange} tabIndex="2">
-              {this.renderOptions(1)}
+              {this.renderRolos()}
             </select>
           </div>
 
           <div className="form-group">
             <span>De quantos metros são os rolos?</span>
             <select name="metros" className="form-control" value={this.state.metros} onChange={this.handleInputChange} tabIndex="3">
-              {this.renderOptions(10)}
+              {this.renderMetros()}
             </select>
           </div>
 
