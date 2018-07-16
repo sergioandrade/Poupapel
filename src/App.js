@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Router, Route, Link } from 'react-router-dom'
+import { Router, Route, Link, Switch } from 'react-router-dom'
 import Compare from './components/pages/compare/compare'
 import Cadastro from './components/pages/cadastro/cadastro'
 import logo from './img/poupapel-logo.svg'
@@ -16,19 +16,22 @@ class App extends Component {
         <Router history={customHistory}>
           <div>
             <div className="header">
-
-              <Link to="/">
-                <IconHome />
-              </Link>
-              <figure className="logo">
-                <img src={logo} alt="poupapel logo" />
-              </figure>
-              <Link to="/compare">
-                <IconList />
-              </Link>
+              <div className="content">
+                <Link to="/">
+                  <IconHome />
+                </Link>
+                <figure className="logo">
+                  <img src={logo} alt="poupapel logo" />
+                </figure>
+                <Link to="/compare">
+                  <IconList />
+                </Link>
+              </div>
             </div>
-            <Route exact path="/" component={Cadastro} />
-            <Route path="/compare" component={Compare} />
+            <Switch>
+              <Route exact path="/" component={Cadastro} />
+              <Route path="/compare" component={Compare} />
+            </Switch>
           </div>
         </Router>
       </div>
