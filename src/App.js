@@ -29,6 +29,7 @@ class App extends Component {
               </div>
             </div>
             <Switch>
+              <Route component={Cadastro} />
               <Route exact path="/" component={Cadastro} />
               <Route path="/compare" component={Compare} />
             </Switch>
