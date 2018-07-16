@@ -31,10 +31,13 @@ class Compare extends Component {
 
   render() {
     return (
-      <div className="compare">
-        {this.renderCards()}
-        <Link to="/" className="button">ADICIONAR MARCA</Link>
-        <Link to="/" className="button button--secondary" onClick={this.clearList}>LIMPAR LISTA</Link>
+      <div className="content">
+        <div className="compare">
+          {this.renderCards()}
+          <small className="price-info">Preço relativo a 100 metros lineares</small>
+          <Link to="/" className="button">ADICIONAR MARCA</Link>
+          <Link to="/" className="button button--secondary" onClick={this.clearList}>LIMPAR LISTA</Link>
+        </div>
       </div>
     );
   }
